@@ -1,0 +1,246 @@
+/* ----------------------------------- *\
+			forms elements styles
+\* ----------------------------------- */
+.frm-main-message {
+	position: relative;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	border-radius: 12px;
+	background: #fff;
+	z-index: 110;
+	border: 1px solid var(--clr-border-att);
+	.field-input {
+		flex: 1;
+	}
+	.field-actions {
+		display: flex;
+		flex-shrink: 0;
+		gap: 33px;
+		padding: 0 16px 0 20px;
+	}
+	.field-action {
+		flex-shrink: 0;
+		display: block;
+		position: relative;
+		&:before {
+			content: "";
+			display: block;
+			width: 1px;
+			height: 24px;
+			position: absolute;
+			right: 100%;top: 0;bottom: 0;
+			background: var(--clr-att-second);
+			margin-right: 16px;
+		}
+	}
+	.button-form {
+		width: 24px;height: 24px;
+	}
+	.form-input {
+		height: 56px;
+		border-radius: 0;
+		background: none;
+		border: none;
+		padding: 0 10px 0 15px;
+		font-size: 16px;
+		font-weight: 500;
+		color: var(--clr-base);
+	}
+}
+.frm-main-search {
+	line-height: 1;
+	position: relative;
+	.form-input {
+		padding-right: 45px;
+		height: 52px;
+	}
+	.button-form {
+		border-radius: var(--mainRadius);
+		height: 52px;
+		width: 52px;
+		background: none;
+		position: absolute;
+		top: 50%;right: 0;
+		margin-top: -26px;
+		z-index: 2;
+	}
+}
+.frm-row,
+.frm-field,
+.frm-row-submit {
+    display: flex;
+    flex-wrap: wrap;
+	position: relative;
+	line-height: 1;
+}
+.frm-field {
+    display: block;
+    width: 100%;
+}
+.frm-select {
+	position: relative;
+	display: block;
+	overflow: hidden;
+    line-height: 1;
+	input {
+		display: block;
+		position: absolute;
+		top: 0;left: 0;
+		width: 0;height: 0;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		display: block;
+		position: relative;
+		cursor: pointer;
+        &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+		&:after {
+			opacity: 0;
+		}
+	}
+}
+
+
+.frm-select {
+	input {
+		&[type="radio"] {
+			&~label {
+				&:before {
+					border-radius: 50%;
+				}
+				&:after {
+					width: 8px;height: 8px;
+					margin: -4px 0 0 -4px;
+					border-radius: 50%;
+					background: #000;
+				}
+			}
+		}
+		&:checked {
+			&~label {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	label {
+		&:before, &:after {
+			
+		}
+		&:after {
+			border-radius: 0;
+			border: none;
+			background: url(../img/icons/chk.svg) center / 24px auto no-repeat;
+			opacity: 0;
+		}
+	}
+	a {
+		color: inherit;
+		&:hover {
+			color: var(--clr-att);
+		}
+	}
+}
+.frm-rate-set {
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	width: 244px;
+	height: 40px;
+	line-height: 1;
+	&:hover {
+		.frm-rate {
+			background-image: url(../img/icons/rate-full.svg) !important;
+			&:hover {
+				&~.frm-rate {
+					background-image: url(../img/icons/rate-empty.svg) !important;
+				}
+			}
+		}
+	}
+	.frm-rate {
+		display: block;
+		width: 51px;
+		height: 40px;
+		cursor: pointer;
+		flex-shrink: 0;
+		position: relative;
+		background-image: url(../img/icons/rate-empty.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 40px auto;
+		margin: 0;
+		&:last-child {
+			width: 40px;
+		}
+	}
+	input {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: -1;
+	}
+	input:nth-child(1):checked {
+		&~.frm-rate {
+			background-image: url(../img/icons/rate-full.svg);
+		}
+		&~.frm-rate~.frm-rate {
+			background-image: url(../img/icons/rate-empty.svg);
+		}
+	}
+	input:nth-child(2):checked {
+		&~.frm-rate {
+			background-image: url(../img/icons/rate-full.svg);
+		}
+		&~.frm-rate~.frm-rate~.frm-rate {
+			background-image: url(../img/icons/rate-empty.svg);
+		}
+	}
+	input:nth-child(3):checked {
+		&~.frm-rate {
+			background-image: url(../img/icons/rate-full.svg);
+		}
+		&~.frm-rate~.frm-rate~.frm-rate~.frm-rate {
+			background-image: url(../img/icons/rate-empty.svg);
+		}
+	}
+	input:nth-child(4):checked {
+		&~.frm-rate {
+			background-image: url(../img/icons/rate-full.svg);
+		}
+		&~.frm-rate~.frm-rate~.frm-rate~.frm-rate~.frm-rate {
+			background-image: url(../img/icons/rate-empty.svg);
+		}
+	}
+	input:nth-child(5):checked {
+		&~.frm-rate {
+			background-image: url(../img/icons/rate-full.svg);
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.frm-main-message {
+		.form-input {
+			font-size: 18px;
+			height: 67px;
+			font-size: 18px;
+		}
+	}
+}
