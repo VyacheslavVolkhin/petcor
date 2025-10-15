@@ -25,7 +25,7 @@
     <script src="./js/scripts.js" defer></script>
 </head>
 
-<body>
+<body class="menu-active menu-small-active">
     <!-- wrap -->
     <div class="wrap">
 
@@ -129,7 +129,7 @@
         <div class="page-header-box">
             <div class="inner-wrap">
                 <div class="title-inner-wrap">
-                    <h1 class="page-title">Оценки</h1>
+                    <h1 class="page-title">Комментарии</h1>
                 </div>
                 <div class="actions-inner-wrap">
                     <div class="action-wrap">
@@ -339,11 +339,11 @@
                     <!--/panel-buttons-box-->
 
                     <!--panel-tabs-box-->
-                    <div class="panel-tabs-box">
+                    <div class="panel-tabs-box js-tabs-nav">
                         <div class="scroll-inner-wrap">
                             <ul class="menu">
                                 <li>
-                                    <a href="" class="btn-tab">
+                                    <a href="" class="btn-tab active" data-tab="tab01">
                                         <div class="button-ico">
                                             <img src="./img/icons/map.svg" alt="">
                                         </div>
@@ -351,7 +351,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="btn-tab active">
+                                    <a href="" class="btn-tab" data-tab="tab02">
                                         <div class="button-ico">
                                             <img src="./img/icons/rates.svg" alt="">
                                         </div>
@@ -360,7 +360,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="btn-tab">
+                                    <a href="" class="btn-tab" data-tab="tab03">
                                         <div class="button-ico">
                                             <img src="./img/icons/comments.svg" alt="">
                                         </div>
@@ -369,7 +369,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" class="btn-tab">
+                                    <a href="" class="btn-tab" data-tab="tab04">
                                         <div class="button-ico">
                                             <img src="./img/icons/favs.svg" alt="">
                                         </div>
@@ -382,11 +382,11 @@
                     </div>
                     <!--/panel-tabs-box-->
 
-                    <!--tiles-box-->
-                    <div class="tiles-box">
-                        <div class="items-wrap">
-                            <!--item wrap-->
-                            <div class="item-wrap wrap-full">
+                    <!--tab-box-->
+                    <div class="tab-box js-tab-block" data-tab="tab03">
+                        <!--tiles-box-->
+                        <div class="tiles-box">
+                            <div class="header-inner-box">
                                 <div class="item-tile-point">
                                     <div class="tile-header-wrap">
                                         <div class="tile-title-wrap">
@@ -416,80 +416,390 @@
                                             <div class="tile-location-title">Природно-исторический парк Кульминки, Люблино, Москва, 1, стр.2 </div>
                                         </div>
                                     </div>
-                                    <div class="tile-buttons-wrap">
-                                        <div class="tile-button">
-                                            <a href="" class="btn button-main button-main-gray">
-                                                <div class="button-title">Рейтинг (★2.7)</div>
+                                </div>
+                                <div class="info-inner-wrap">
+                                    <div class="info-date">Сегодня, 15:30</div>
+                                </div>
+                            </div>
+                            <div class="items-wrap">
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-full">
+                                    <div class="item-tile-user">
+                                        <div class="tile-main-wrap">
+                                            <a href="" class="tile-title-wrap">
+                                                <div class="elm-photo photo-cover photo-pet">
+                                                    <img src="./img/pet01.jpg" alt="">
+                                                </div>
+                                                <div class="tile-title tile-title-small">@ivan1234</div>
                                             </a>
-                                        </div>
-                                        <div class="tile-button">
-                                            <a href="" class="btn button-main button-main-gray">
-                                                <div class="button-title">Комментарии (3)</div>
-                                            </a>
-                                        </div>
-                                        <div class="tile-button">
-                                            <a href="" class="btn button-main">
-                                                <div class="button-title">Построить маршрут</div>
-                                            </a>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-info lines-dots">
+                                                    <p>Внезапно, предприниматели в сети интернет, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут функционально разнесены на независимые элементы?</p>
+                                                </div>
+                                            </div>
+                                            <div class="tile-date-wrap">
+                                                <div class="tile-date">Сегодня, 15:30</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--/item wrap-->
-                            <!--item wrap-->
-                            <div class="item-wrap wrap-full">
-                                <div class="item-tile-point">
-                                    <div class="tile-header-wrap">
-                                        <div class="tile-title-wrap">
-                                            <div class="tile-title">Точка на карте</div>
-                                            <a href="" class="elm-counter">5</a>
-                                        </div>
-                                        <div class="tile-actions-wrap">
-                                            <div class="tile-action">
-                                                <a href="" class="tile-button-fav btn-action-ico ico-fav-toggle button-active-toggle js-btn-tgl"></a>
-                                            </div>
-                                            <div class="tile-action">
-                                                <a href="" class="tile-button-menu btn-action-ico ico-dotted"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tile-location-wrap">
-                                        <a href="" class="tile-location">
-                                            <div class="elm-ico">
-                                                <img src="./img/icons/point.svg" alt="">
-                                            </div>
-                                            <div class="tile-location-title">55°41′03″ - 37°48′12″ </div>
-                                        </a>
-                                        <div class="tile-location">
-                                            <div class="elm-ico">
-                                                <img src="./img/icons/location.svg" alt="">
-                                            </div>
-                                            <div class="tile-location-title">Природно-исторический парк Кульминки, Люблино, Москва, 1, стр.2 </div>
-                                        </div>
-                                    </div>
-                                    <div class="tile-buttons-wrap">
-                                        <div class="tile-button">
-                                            <a href="" class="btn button-main button-main-gray">
-                                                <div class="button-title">Рейтинг (★2.7)</div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-full">
+                                    <div class="item-tile-user">
+                                        <div class="tile-main-wrap">
+                                            <a href="" class="tile-title-wrap">
+                                                <div class="elm-photo photo-cover photo-pet">
+                                                    <img src="./img/pet01.jpg" alt="">
+                                                </div>
+                                                <div class="tile-title tile-title-small">@ivan1234</div>
                                             </a>
-                                        </div>
-                                        <div class="tile-button">
-                                            <a href="" class="btn button-main button-main-gray">
-                                                <div class="button-title">Комментарии (3)</div>
-                                            </a>
-                                        </div>
-                                        <div class="tile-button">
-                                            <a href="" class="btn button-main">
-                                                <div class="button-title">Построить маршрут</div>
-                                            </a>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-info lines-dots">
+                                                    <p>Внезапно, предприниматели в сети интернет, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут функционально разнесены на независимые элементы?</p>
+                                                </div>
+                                            </div>
+                                            <div class="tile-date-wrap">
+                                                <div class="tile-date">Сегодня, 15:30</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-full">
+                                    <div class="item-tile-user">
+                                        <div class="tile-main-wrap">
+                                            <a href="" class="tile-title-wrap">
+                                                <div class="elm-photo photo-cover photo-pet"></div>
+                                                <div class="tile-title tile-title-small">@ivan1234</div>
+                                            </a>
+                                            <div class="tile-info-wrap">
+                                                <div class="tile-info lines-dots">
+                                                    <p>Внезапно, предприниматели в сети интернет, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут функционально разнесены на независимые элементы?</p>
+                                                </div>
+                                            </div>
+                                            <div class="tile-date-wrap">
+                                                <div class="tile-date">Сегодня, 15:30</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
                             </div>
-                            <!--/item wrap-->
                         </div>
+                        <!--/tiles-box-->
                     </div>
-                    <!--/tiles-box-->
+                    <!--/tab-box-->
+
+                    <!--tab-box-->
+                    <div class="tab-box js-tab-block" data-tab="tab02">
+                        <!--tiles-box-->
+                        <div class="tiles-box">
+                            <div class="items-wrap">
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-full">
+                                    <div class="item-tile-point">
+                                        <div class="tile-header-wrap">
+                                            <div class="tile-title-wrap">
+                                                <div class="tile-title">Точка на карте</div>
+                                                <a href="" class="elm-counter">5</a>
+                                            </div>
+                                            <div class="tile-actions-wrap">
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-fav btn-action-ico ico-fav-toggle button-active-toggle js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-menu btn-action-ico ico-dotted"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-location-wrap">
+                                            <a href="" class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/point.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">55°41′03″ - 37°48′12″ </div>
+                                            </a>
+                                            <div class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/location.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">Природно-исторический парк Кульминки, Люблино, Москва, 1, стр.2 </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-buttons-wrap">
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Рейтинг (★2.7)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Комментарии (3)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main">
+                                                    <div class="button-title">Построить маршрут</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-full">
+                                    <div class="item-tile-point">
+                                        <div class="tile-header-wrap">
+                                            <div class="tile-title-wrap">
+                                                <div class="tile-title">Точка на карте</div>
+                                                <a href="" class="elm-counter">5</a>
+                                            </div>
+                                            <div class="tile-actions-wrap">
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-fav btn-action-ico ico-fav-toggle button-active-toggle js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-menu btn-action-ico ico-dotted"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-location-wrap">
+                                            <a href="" class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/point.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">55°41′03″ - 37°48′12″ </div>
+                                            </a>
+                                            <div class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/location.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">Природно-исторический парк Кульминки, Люблино, Москва, 1, стр.2 </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-buttons-wrap">
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Рейтинг (★2.7)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Комментарии (3)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main">
+                                                    <div class="button-title">Построить маршрут</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                            </div>
+                        </div>
+                        <!--/tiles-box-->
+                    </div>
+                    <!--/tab-box-->
+
+                    <!--tab-box-->
+                    <div class="tab-box js-tab-block" data-tab="tab01">
+                        <!--map-box-->
+                        <div class="map-box">
+                            <div class="map-inner-wrap">
+                                <img src="./img/map.jpg" alt="" class="img-bg-cover">
+                            </div>
+                            <div class="actions-inner-wrap">
+                                <a href="" class="btn button-main">
+                                    <div class="button-title">Создать свой маршрут</div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/map-box-->
+
+                        <!--title-box-->
+                        <div class="title-box">
+                            <div class="title-wrap">
+                                <h2 class="page-title">Недалеко от вас можно погулять с собакой:</h2>
+                            </div>
+                        </div>
+                        <!--/title-box-->
+
+                        <!--tiles-box-->
+                        <div class="tiles-box">
+                            <div class="items-wrap">
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-full">
+                                    <div class="item-tile-point">
+                                        <div class="tile-header-wrap">
+                                            <div class="tile-title-wrap">
+                                                <div class="tile-title">Парк Кузьминки</div>
+                                                <a href="" class="elm-counter">5</a>
+                                            </div>
+                                            <div class="tile-actions-wrap">
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-fav btn-action-ico ico-fav-toggle button-active-toggle js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-menu btn-action-ico ico-dotted"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-location-wrap">
+                                            <a href="" class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/point.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">55°41′03″ - 37°48′12″ </div>
+                                            </a>
+                                            <div class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/location.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">Природно-исторический парк Кульминки, Люблино, Москва, 1, стр.2 </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-buttons-wrap">
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Рейтинг (★2.7)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Комментарии (3)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main">
+                                                    <div class="button-title">Построить маршрут</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-full">
+                                    <div class="item-tile-point">
+                                        <div class="tile-header-wrap">
+                                            <div class="tile-title-wrap">
+                                                <div class="tile-title">Парк Кузьминки</div>
+                                                <a href="" class="elm-counter">5</a>
+                                            </div>
+                                            <div class="tile-actions-wrap">
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-fav btn-action-ico ico-fav-toggle button-active-toggle js-btn-tgl"></a>
+                                                </div>
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-menu btn-action-ico ico-dotted"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-location-wrap">
+                                            <a href="" class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/point.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">55°41′03″ - 37°48′12″ </div>
+                                            </a>
+                                            <div class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/location.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">Природно-исторический парк Кульминки, Люблино, Москва, 1, стр.2 </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-buttons-wrap">
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Рейтинг (★2.7)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Комментарии (3)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main">
+                                                    <div class="button-title">Построить маршрут</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                            </div>
+                        </div>
+                        <!--/tiles-box-->
+                    </div>
+                    <!--/tab-box-->
+
+                    <!--tab-box-->
+                    <div class="tab-box js-tab-block" data-tab="tab04">
+                        <!--tiles-box-->
+                        <div class="tiles-box">
+                            <div class="items-wrap">
+                                <!--item wrap-->
+                                <div class="item-wrap wrap-full">
+                                    <div class="item-tile-point">
+                                        <div class="tile-header-wrap">
+                                            <div class="tile-title-wrap">
+                                                <div class="tile-title">Парк Кузьминки</div>
+                                                <a href="" class="elm-counter">5</a>
+                                            </div>
+                                            <div class="tile-actions-wrap">
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-fav btn-action-ico ico-fav-toggle button-active-toggle js-btn-tgl active"></a>
+                                                </div>
+                                                <div class="tile-action">
+                                                    <a href="" class="tile-button-menu btn-action-ico ico-dotted"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-location-wrap">
+                                            <a href="" class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/point.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">55°41′03″ - 37°48′12″ </div>
+                                            </a>
+                                            <div class="tile-location">
+                                                <div class="elm-ico">
+                                                    <img src="./img/icons/location.svg" alt="">
+                                                </div>
+                                                <div class="tile-location-title">Природно-исторический парк Кульминки, Люблино, Москва, 1, стр.2 </div>
+                                            </div>
+                                        </div>
+                                        <div class="tile-buttons-wrap">
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Рейтинг (★2.7)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main button-main-gray">
+                                                    <div class="button-title">Комментарии (3)</div>
+                                                </a>
+                                            </div>
+                                            <div class="tile-button">
+                                                <a href="" class="btn button-main">
+                                                    <div class="button-title">Построить маршрут</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/item wrap-->
+                            </div>
+                        </div>
+                        <!--/tiles-box-->
+                    </div>
+                    <!--/tab-box-->
 
                 </div>
                 <!--/content-wrap-->
