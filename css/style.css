@@ -474,6 +474,17 @@ html.with-fancybox body.hide-scrollbar {
   -ms-flex: 1;
       flex: 1;
 }
+.main-menu-box .btn-menu-close {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+}
 .main-menu-box .menu li {
   border-bottom: 1px solid var(--clr-border-light);
 }
@@ -559,6 +570,9 @@ html.with-fancybox body.hide-scrollbar {
     pointer-events: none;
     opacity: 0;
   }
+  .main-menu-box .btn-menu-close {
+    display: block;
+  }
   .main-menu-box .menu-content-block {
     position: fixed;
     padding: 23px 0;
@@ -588,6 +602,22 @@ html.with-fancybox body.hide-scrollbar {
   }
   .main-menu-box .info-wrap {
     padding: 10px 30px;
+  }
+}
+@media (max-width: 479px) {
+  .menu-active .main-menu-box .btn-menu-close {
+    transform: translateX(0);
+  }
+  .main-menu-box .menu-content-block {
+    width: 328px;
+  }
+  .main-menu-box .btn-menu-close {
+    top: 5px;
+    left: 280px;
+    right: auto;
+    background: none;
+    transform: translateX(-300px);
+    transition: all ease 0.2s;
   }
 }
 @media (min-width: 1024px) {
