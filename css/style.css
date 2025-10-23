@@ -18,7 +18,7 @@
   --shadowSection: 0 4px 4px 0 rgba(110, 129, 231, 0.15);
   --mainRadius: 12px;
   --icoSize: 24px;
-  --min: 430px;
+  --min: 360px;
   --max: 100%;
   --paddingContainer: 20px;
   --filterBlack: brightness(0) grayscale(1);
@@ -463,6 +463,7 @@ html.with-fancybox body.hide-scrollbar {
   background: #fff;
   padding: 16px 0 23px 0;
   box-shadow: 0 1px 75.2px 0 #54B5FB;
+  min-width: var(--min);
   border-radius: 32px 32px 0 0;
 }
 .header-actions-panel .inner-wrap {
@@ -2561,6 +2562,9 @@ select.form-input:required:invalid {
   padding-left: 0;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+.btn.button-text-att:not(:hover) {
+  color: #7D16FF;
 }
 .btn .button-ico {
   width: 24px;
