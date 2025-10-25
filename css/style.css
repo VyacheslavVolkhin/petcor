@@ -2052,6 +2052,7 @@ html.with-fancybox body.hide-scrollbar {
 .page-header-box {
   margin-bottom: 15px;
   position: relative;
+  z-index: 120;
 }
 .page-header-box .inner-wrap {
   display: -ms-flexbox;
