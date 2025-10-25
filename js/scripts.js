@@ -28,8 +28,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.querySelectorAll('.js-menu-toggle').forEach(toggle => {
 		toggle.addEventListener('click', function(e) {
 			e.preventDefault();
-			document.body.classList.toggle('menu-active');
-			document.body.classList.remove('menu-small-active');
+			if (window.innerWidth >= 1024) {
+				document.body.classList.toggle('menu-active');
+				document.body.classList.remove('menu-small-active');
+				document.body.classList.remove('menu-active-mobile');
+			} else {
+				document.body.classList.toggle('menu-active-mobile');
+				//document.body.classList.remove('menu-active');
+				//document.body.classList.remove('menu-small-active');
+			}
 		});
 	});
 	document.querySelectorAll('.js-menu-width-toggle').forEach(toggle => {

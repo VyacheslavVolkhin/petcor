@@ -216,7 +216,7 @@ html.with-fancybox body.hide-scrollbar {
 		padding-top: 70px;
 		padding-bottom: 94px;
 	}
-	.menu-active {
+	.menu-active-mobile {
 		overflow: hidden;
 		.main-menu-box {
 			transform: translateX(0);
@@ -296,9 +296,22 @@ html.with-fancybox body.hide-scrollbar {
 @media (min-width: 1024px) {
 	.wrap {
 		padding-top: 75px;
+		transition: padding-top ease 0.2s;
 	}
-	
+	.header-actions-panel {
+		transition: transform ease 0.2s;
+		z-index: 130;
+	}
 	.menu-active {
+		.wrap {
+			padding-top: 25px;
+		}
+		.header-actions-panel {
+			transform: translateY(-100%);
+			opacity: 0;
+			pointer-events: none;
+			z-index: -100;
+		}
 		.btn-action.js-menu-toggle {
 			background: var(--clr-att);
 			.button-ico {
