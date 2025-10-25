@@ -5,6 +5,25 @@ document.addEventListener("DOMContentLoaded", function() {
 		//settings
 	});
 
+
+	//copy button
+	document.querySelectorAll('.js-btn-copy').forEach(function(btn) {
+		btn.addEventListener('click', function(e) {
+			e.preventDefault();
+			const content = btn.getAttribute('data-content');
+			if (content) {
+				navigator.clipboard.writeText(content)
+					.then(() => {
+						// alert('Скопировано!');
+					})
+					.catch(err => {
+						// Обработка ошибок, если не удалось скопировать
+						alert('Ошибка копирования');
+					});
+			}
+		});
+	});
+
 	//side menu toggle
 	document.querySelectorAll('.js-menu-toggle').forEach(toggle => {
 		toggle.addEventListener('click', function(e) {

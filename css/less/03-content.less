@@ -186,9 +186,16 @@
 		color: var(--clr-title);
 	}
 	.action-wrap {
-		display: block;
 		flex-shrink: 0;
+		position: relative;
+		.elm-dropdown {
+			display: none;
+			position: absolute;
+			top: 100%;right: -52px;
+			margin-top: 10px;
+		}
 	}
+
 	.btn-action {
 		width: 42px;height: 42px;
 	}
@@ -400,6 +407,75 @@
 	}
 	.items-wrap, .menu {
 		flex-wrap: nowrap;
+	}
+}
+.share-box {
+	margin: 0 auto;
+	.link-action-wrap {
+		display: flex;
+		align-items: center;
+		padding: 12px 15px;
+		font-size: 16px;
+		line-height: var(--lhsize);
+		color: #00405B;
+		border-bottom: 1px solid var(--clr-att);
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	.soc-actions-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -8px 0 -8px;;
+		border-bottom: 1px solid var(--clr-att);
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	.link-title {
+		display: block;
+		position: relative;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		flex: 1;
+	}
+	.link-action {
+		flex-shrink: 0;
+	}
+	.btn-soc {
+		font-size: 16px;
+		color: var(--clr-base);
+		line-height: var(--lhsize);
+		text-align: center;
+		padding: 15px 8px;
+		width: 25%;
+		flex-shrink: 0;
+		display: block;
+		position: relative;
+		.button-ico {
+			width: 50px;height: 50px;
+			margin: 0 auto 10px auto;
+			border-radius: 10px;
+			position: relative;
+			overflow: hidden;
+			img, svg {
+				width: 100%;
+			}
+		}
+		&:hover {
+			color: var(--clr-base);
+		}
+	}
+	.btn {
+		height: 35px;
+		border-radius: 18px;
+		padding: 0 13px;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.84px;
 	}
 }
 @media (max-width: 1023px) {

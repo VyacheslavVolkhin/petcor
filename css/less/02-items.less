@@ -605,13 +605,13 @@
 .elm-overlay {
     display: none;
     animation: fadein ease 0.2s;
-    background: fade(#000, 80);
+    background: rgba(0, 25, 36, 0.60);
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 120;
+    z-index: 108;
     &.active {
         display: block;
     }
@@ -764,6 +764,88 @@
 	&[data-rate="0"] {
 		.elm-rate {
 			background-image: url(../img/icons/rate-empty.svg);
+		}
+	}
+}
+.elm-fix-panel {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 110;
+	min-width: var(--min);
+	.fix-panel-content {
+		position: fixed;
+		bottom: 0;left: 0;right: 0;
+		z-index: 20;
+		border-radius: 29px 29px 0 0;
+		background: #fff;
+		padding: 48px 15px 15px 15px;
+		transition: all ease 0.2s;
+		margin: 0 auto;
+		max-width: 700px;
+		min-width: var(--min);
+		.btn-popup-close {
+			display: block;
+			position: relative;
+			position: absolute;
+			top: 0;left: 0;right: 0;
+			height: 48px;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 50%;top: 15px;
+				margin-left: -33px;
+				width: 66px;height: 3px;
+				border-radius: 2px;
+				background: #544864;
+			}
+		}
+	}
+}
+.elm-dropdown {
+	border-radius: 16px;
+	background: #fff;
+	position: absolute;
+	z-index: 20;
+	width: 390px;
+	max-width: 90vw;
+	padding: 20px 15px;
+	box-shadow: 0 4px 4px 0 rgba(110, 129, 231, 0.15);
+	.menu {
+		max-height: 400px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+	}
+	.btn-menu {
+		display: block;
+		position: relative;
+		font-size: 16px;
+		line-height: var(--lhsize);
+		color: var(--clr-base);
+		padding: 12px 14px;
+		border-bottom: 1px solid #F5F5F5;
+		&:hover, &.active {
+			color: var(--clr-base);
+			border-bottom-color: var(--clr-att);
+		}
+	}
+	li {
+		&:last-child {
+			.btn-menu {
+				border-bottom-color: #fff;
+				&:hover, &.active {
+					border-bottom-color: var(--clr-att);
+				}
+			}
 		}
 	}
 }
