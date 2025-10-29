@@ -544,7 +544,9 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width: 1023px) {
   .wrap {
     padding-top: 70px;
-    padding-bottom: 94px;
+  }
+  .header-actions-panel {
+    display: none;
   }
   .menu-active-mobile {
     overflow: hidden;
