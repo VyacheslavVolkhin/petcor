@@ -249,7 +249,7 @@
                             </form>
                         </div>
                         <div class="action-inner-wrap">
-                            <a href="" class="btn-action-ico button-action-main button-action-border">
+                            <a href="" class="btn-action-ico button-action-main button-action-border js-popup-open" data-popup="popup-filter">
                                 <img src="./img/icons/filter.svg" alt="">
                             </a>
                         </div>
@@ -965,7 +965,7 @@
                                         <a href="" class="btn-action-ico button-soc">
                                             <img src="./img/icons/soc-vk.svg" alt="">
                                         </a>
-                                        <a href="" class="btn-action-ico button-soc">
+                                        <a href="" class="btn-action-ico button-soc js-popup-open" data-popup="popup-share">
                                             <img src="./img/icons/more.svg" alt="">
                                         </a>
                                     </div>
@@ -988,7 +988,122 @@
     </div>
     <!-- /wrap -->
 
-
+    <!--popup-outer-box-->
+    <div class="popup-outer-box" id="popup-share">
+        <div class="popup-box elm-fix-panel">
+            <div class="fix-panel-content">
+                <a href="" class="btn-popup-close js-popup-close"></a>
+                <div class="popup-share-box">
+                    <div class="popup-title-wrap">
+                        <div class="popup-title">Подпишись <br>и&nbsp;получи NFT</div>
+                    </div>
+                    <div class="popup-content-wrap">
+                        <div class="soc-actions-wrap">
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share01.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share02.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share03.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share04.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share05.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share06.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share07.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share08.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share09.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share10.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share11.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/share12.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="popup-footer-wrap">
+                        <a href="" class="btn button-main">
+                            <div class="button-title">закрыть</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
+    <!--popup-outer-box-->
+    <div class="popup-outer-box" id="popup-filter">
+        <div class="popup-box elm-fix-panel">
+            <div class="fix-panel-content">
+                <a href="" class="btn-popup-close js-popup-close"></a>
+                <form action="/" class="popup-filter-box">
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Город</div>
+                            <select class="form-input" required>
+                                <option selected disabled hidden value="">Выберите город</option><!--placeholder-->
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Радиус</div>
+                            <select class="form-input" required>
+                                <option selected disabled hidden value="">В 1 км от меня</option><!--placeholder-->
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="frm-row">
+                        <div class="frm-field">
+                            <div class="field-title">Категория</div>
+                            <select class="form-input" required>
+                                <option selected disabled hidden value="">Выберите категорию</option><!--placeholder-->
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                                <option>Пункт списка</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="frm-row-submit">
+                        <div class="frm-field field-submit">
+                            <button type="submit" class="btn button-border-main">
+                                <div class="button-title">По вашему запросу (20)</div>
+                            </button>
+                        </div>
+                        <div class="frm-field field-reset">
+                            <button type="reset" class="btn button-link">
+                                <div class="button-title button-title-border">Сбросить</div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><!--/popup-outer-box-->
 
 </body>
 

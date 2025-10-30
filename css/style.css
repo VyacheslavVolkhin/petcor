@@ -411,7 +411,7 @@ html.with-fancybox body.hide-scrollbar {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 101;
+  z-index: 140;
 }
 .header .inner-wrap {
   padding-top: 5px;
@@ -565,7 +565,7 @@ html.with-fancybox body.hide-scrollbar {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 120;
+    z-index: 150;
     background: rgba(0, 25, 36, 0.6);
     overflow: hidden;
     transition: opacity ease 0.5s;
@@ -2399,6 +2399,174 @@ html.with-fancybox body.hide-scrollbar {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.84px;
+}
+body.popup-open {
+  overflow: hidden;
+}
+.popup-outer-box {
+  display: none;
+  padding: 30px 0 0 0;
+  animation: fadein ease 0.2s;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  position: fixed;
+  z-index: 170;
+  background: rgba(0, 25, 36, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.popup-outer-box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.popup-outer-box.active {
+  display: -ms-flexbox;
+  display: flex;
+}
+.popup-box {
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto auto 0 auto;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  max-height: inherit;
+  background-color: #fff;
+  z-index: 20;
+}
+.popup-box.elm-fix-panel {
+  width: 100%;
+  max-width: 700px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  border-radius: 29px 29px 0 0;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+}
+.popup-box.elm-fix-panel .fix-panel-content {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  margin: 0;
+  transform: none;
+}
+.popup-box .popup-title-wrap {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.popup-box .popup-title {
+  display: block;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: bold;
+}
+.popup-box .popup-content-wrap {
+  display: block;
+}
+.popup-box .popup-footer-wrap {
+  text-align: center;
+  margin-top: 15px;
+}
+.popup-box .popup-footer-wrap .btn {
+  height: 40px;
+  padding: 0 30px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+.popup-filter-box .frm-row,
+.popup-filter-box .frm-row-submit {
+  margin: 0;
+}
+.popup-filter-box .frm-field {
+  padding: 0;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.popup-filter-box .field-title {
+  font-size: 16px;
+  line-height: 1.35;
+  color: #00405B;
+  font-weight: 400;
+  margin: 0 0 5px 0;
+}
+.popup-filter-box .frm-row-submit {
+  text-align: center;
+}
+.popup-filter-box .frm-row-submit .frm-field:last-child {
+  margin-bottom: 0;
+}
+.popup-filter-box .frm-row-submit .btn {
+  height: 35px;
+  padding: 0 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.popup-filter-box .frm-row-submit .btn.button-link {
+  height: 22px;
+  line-height: 1;
+  padding: 0;
+  color: #00405B;
+  border-radius: 0;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.popup-filter-box .frm-row-submit .btn.button-link:hover {
+  color: var(--clr-att);
+}
+.popup-filter-box select.form-input {
+  padding-right: 40px;
+  background-position: right 12px center;
+}
+.popup-share-box {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.popup-share-box .soc-actions-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  gap: 15px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.popup-share-box .button-soc.btn-action-ico {
+  width: 42px;
+  height: 42px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (max-width: 1023px) {
   .wrap:has(.chat-box) .page-full {
