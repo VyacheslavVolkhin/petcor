@@ -1,9 +1,72 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	// page loader
+	const wrap = document.querySelector('.wrap');
+	const infoValue = document.querySelector('.info-value');
+	const loaderImages = document.querySelectorAll('.elm-photo img');
+
+	if (wrap && loaderImages.length && !wrap.classList.contains('wrap-noload')) {
+		const MIN_DURATION = 2000;
+		const imgCount = loaderImages.length;
+		wrap.classList.add('wrap-load');
+		// Track real resource loading progress
+		const resources = performance.getEntriesByType('resource');
+		const totalResources = resources.length || 1;
+		let loadedResources = 0;
+		let realProgress = 0;
+		const observer = new PerformanceObserver((list) => {
+			loadedResources += list.getEntries().length;
+			realProgress = Math.min(loadedResources / Math.max(totalResources, loadedResources), 1);
+		});
+		observer.observe({ type: 'resource', buffered: true });
+		let currentImg = 0;
+		let lastImgSwitch = 0;
+		const startTime = performance.now();
+		function finish() {
+			observer.disconnect();
+			if (infoValue) infoValue.textContent = '100%';
+			wrap.classList.remove('wrap-load');
+		}
+		function animatePercent(ts) {
+			const elapsed = ts - startTime;
+			const timeProgress = Math.min(elapsed / MIN_DURATION, 1);
+
+			const displayProgress = Math.min(realProgress, timeProgress);
+
+			if (infoValue) infoValue.textContent = Math.floor(displayProgress * 100) + '%';
+			const imgIndex = Math.min(Math.floor(displayProgress * imgCount), imgCount - 1);
+			if (imgIndex !== currentImg) {
+				loaderImages[currentImg].style.opacity = '0';
+				currentImg = imgIndex;
+				loaderImages[currentImg].style.opacity = '1';
+			}
+
+			const done = elapsed >= MIN_DURATION && realProgress >= 1;
+			if (!done) {
+				requestAnimationFrame(animatePercent);
+			} else {
+				finish();
+			}
+		}
+		if (document.readyState === 'complete') {
+			realProgress = 1;
+		} else {
+			window.addEventListener('load', () => { realProgress = 1; }, { once: true });
+		}
+
+		requestAnimationFrame(animatePercent);
+	}
+	// end page loader
+
+
+	
+	
+	
 	//fancybox
 	Fancybox.bind("[data-fancybox]", {
 		//settings
 	});
+
 
 
 	//copy button

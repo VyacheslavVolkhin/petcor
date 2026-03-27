@@ -408,6 +408,28 @@ select.form-input:required:invalid {
 			margin-top: 0;
 		}
 	}
+	&.active {
+		overflow: hidden;
+		&:before {
+			opacity: 1;
+		}
+	}
+	&:hover {
+		overflow: hidden;
+		&:before {
+			opacity: 0.5;
+		}
+	}
+	&:before {
+		content: "";
+		display: block;
+		border-radius: 15px;
+		position: absolute;
+		bottom: 0;left: 0;right: 0;top: 0;
+		opacity: 0;
+		transition: all ease 0.2s;
+		border: 3px solid var(--clr-att);
+	}
 }
 .btn-action {
 	display: flex;

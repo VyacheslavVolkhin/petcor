@@ -3168,6 +3168,31 @@ select.form-input:required:invalid {
 .btn-panel .button-title:first-child {
   margin-top: 0;
 }
+.btn-panel.active {
+  overflow: hidden;
+}
+.btn-panel.active:before {
+  opacity: 1;
+}
+.btn-panel:hover {
+  overflow: hidden;
+}
+.btn-panel:hover:before {
+  opacity: 0.5;
+}
+.btn-panel:before {
+  content: "";
+  display: block;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  transition: all ease 0.2s;
+  border: 3px solid var(--clr-att);
+}
 .btn-action {
   display: -ms-flexbox;
   display: flex;
@@ -4989,3 +5014,86 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
 /* ----------------------------------- *\
 			icons
 \* ----------------------------------- */
+/* loaded animation */
+.wrap-load .load-animation-box {
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrap-noload .load-animation-box {
+  display: none !important;
+}
+.load-animation-box {
+  display: none;
+  animation: fadein ease 0.2s;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  background: #F0F9FF url(../img/load/bg.jpg) center no-repeat;
+  background-size: cover;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135%;
+  text-align: center;
+  gap: 0;
+  padding: var(--paddingContainer);
+}
+.load-animation-box .title-inner-wrap,
+.load-animation-box .info-inner-wrap,
+.load-animation-box .photo-inner-wrap {
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  z-index: 3;
+}
+.load-animation-box .photo-inner-wrap {
+  -ms-flex: 1;
+      flex: 1;
+  max-height: 450px;
+  position: relative;
+  z-index: 2;
+}
+.load-animation-box .info-title,
+.load-animation-box .info-value,
+.load-animation-box .section-title {
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+.load-animation-box .section-title {
+  font-size: 1.5em;
+}
+.load-animation-box .info-value {
+  display: block;
+  font-size: 2.4em;
+  margin-top: 0.4em;
+}
+.load-animation-box .elm-photo {
+  aspect-ratio: 480/720;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  width: auto;
+  max-width: inherit;
+  height: 160%;
+  max-height: initial;
+  transform: translate(-50%, -50%);
+}
+.load-animation-box .elm-photo img,
+.load-animation-box .elm-photo svg {
+  transition: none;
+  opacity: 0;
+}
+.load-animation-box .elm-photo img:first-child,
+.load-animation-box .elm-photo svg:first-child {
+  opacity: 1;
+}
+/* end loaded animation */
