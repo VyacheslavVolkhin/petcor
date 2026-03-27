@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			wrap.classList.remove('wrap-load');
 		}
 		function animatePercent(ts) {
-			const elapsed = ts - startTime;
+			const elapsed = Math.max(ts - startTime, 0);
 			const timeProgress = Math.min(elapsed / MIN_DURATION, 1);
 
 			const displayProgress = Math.min(realProgress, timeProgress);
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// end page loader
 
 
-	
+
 	
 	
 	//fancybox
