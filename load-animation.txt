@@ -1,0 +1,6 @@
+Анимация загрузки
+1) Новые стили от /* loaded animation */ до /* end loaded animation */
+2) новый скрипт от // page loader до // end page loader
+3) Параметр MIN_DURATION отвечает за минимальное время показа анимации, можно поставить 0
+4) Блок анимации .load-animation-box
+4) Если к .wrap добавить класс .wrap-noload, то анимация показываться не будет

@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		const MIN_DURATION = 2000;
 		const imgCount = loaderImages.length;
 		wrap.classList.add('wrap-load');
-		// Track real resource loading progress
 		const resources = performance.getEntriesByType('resource');
 		const totalResources = resources.length || 1;
 		let loadedResources = 0;
