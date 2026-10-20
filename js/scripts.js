@@ -324,53 +324,81 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Popups
 	let popupCurrent;
-	let popupsList = document.querySelectorAll('.popup-outer-box')
-
-	document.querySelectorAll(".js-popup-open").forEach(function (element) {
-	element.addEventListener("click", function (e) {
-		document.querySelector(".popup-outer-box").classList.remove("active");
-		document.body.classList.add("popup-open");
-		for (i=0;i<popupsList.length;i++) {
-			popupsList[i
-				].classList.remove("active");
+	let popupsList = document.querySelectorAll('.popup-outer-box');
+	let popupTimer = null;
+	
+	document.addEventListener("click", function(e) {
+		const openButton = e.target.closest(".js-popup-open");
+		if (openButton) {
+			document.querySelector(".popup-outer-box")?.classList.remove("active");
+			document.body.classList.add("popup-open");
+			if (popupTimer) {
+				clearTimeout(popupTimer);
+				popupTimer = null;
 			}
-
-		popupCurrent = this.getAttribute("data-popup");
-		document
-		.querySelector(
-			`.popup-outer-box[id="${popupCurrent}"
-			]`
-		)
-		.classList.add("active");
-
-		e.preventDefault();
-		e.stopPropagation();
-		return false;
-		});
-	});
-	document.querySelectorAll(".js-popup-close").forEach(function (element) {
-	element.addEventListener("click", function (event) {
-		document.body.classList.remove("popup-open");
-		for (i=0;i<popupsList.length;i++) {
-			popupsList[i
-				].classList.remove("active");
+			for (let i = 0; i < popupsList.length; i++) {
+				popupsList[i].classList.remove("active");
 			}
-		event.preventDefault();
-		event.stopPropagation();
-		});
-	});
-	document.querySelectorAll(".popup-outer-box").forEach(function (element) {
-	element.addEventListener("click", function (event) {
-		if (!event.target.closest(".popup-box")) {
-		document.body.classList.remove("popup-open");
-		document.body.classList.remove("popup-open-scroll");
-		document.querySelectorAll(".popup-outer-box").forEach(function (e) {
-			e.classList.remove("active");
-				});
-		return false;
+			popupCurrent = openButton.getAttribute("data-popup");
+			const popupElement = document.querySelector(`.popup-outer-box[id="${popupCurrent}"]`);
+			popupElement.classList.add("active");
+			const timerValue = openButton.getAttribute("data-popup-timer");
+			if (timerValue) {
+				const timerMs = parseInt(timerValue);
+				if (!isNaN(timerMs) && timerMs > 0) {
+					popupTimer = setTimeout(function() {
+						document.body.classList.remove("popup-open");
+						document.body.classList.remove("popup-open-scroll");
+						popupElement.classList.remove("active");
+						popupTimer = null;
+					}, timerMs);
+				}
 			}
-		});
+			e.preventDefault();
+			e.stopPropagation();
+			return;
+		}
+		const closeButton = e.target.closest(".js-popup-close");
+		if (closeButton) {
+			if (popupTimer) {
+				clearTimeout(popupTimer);
+				popupTimer = null;
+			}
+			document.body.classList.remove("popup-open");
+			for (let i = 0; i < popupsList.length; i++) {
+				popupsList[i].classList.remove("active");
+			}
+			e.preventDefault();
+			e.stopPropagation();
+		}
 	});
+	window.openPopupMessage = function(selector) {
+		const popupElement = document.querySelector(selector);
+		if (!popupElement) return;
+		document.body.classList.add('popup-open');
+		popupElement.classList.add('active');
+	};
+	window.closePopup = function(popupId) {
+		if (popupTimer) {
+			clearTimeout(popupTimer);
+			popupTimer = null;
+		}
+		const popupElement = document.querySelector(`.popup-outer-box[id="${popupId}"]`);
+		if (popupElement) {
+			popupElement.classList.remove("active");
+		}
+		const activePopups = document.querySelectorAll('.popup-outer-box.active');
+		if (activePopups.length === 0) {
+			document.body.classList.remove("popup-open");
+			document.body.classList.remove("popup-open-scroll");
+		}
+	};
+
+	// open popup 
+	//openPopupMessage('#popup-order');
+
+	// close popup
+	//closePopup('popup-order');
 
 
 })

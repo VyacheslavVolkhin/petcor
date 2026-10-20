@@ -6106,3 +6106,47 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
   }
 }
 /* end new blocks 10.2026 */
+/* new popup 10.2026 */
+.popup-order-box {
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  position: relative;
+}
+.popup-order-box .elm-ico {
+  width: 70px;
+  height: 70px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 0 auto;
+}
+.popup-order-box .elm-photo {
+  margin: 0 auto;
+  width: 187px;
+}
+.popup-order-box .section-title {
+  display: block;
+  font-size: 20px;
+  line-height: 1.35;
+  margin: 0;
+  width: 100%;
+  font-weight: 500;
+}
+.popup-order-box .section-title a:not(:hover) {
+  color: #7D16FF;
+}
+.popup-order-box .section-title .text-att {
+  color: #7D16FF;
+}
+.popup-order-box .btn {
+  height: 35px;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* end new popup 10.2026 */
